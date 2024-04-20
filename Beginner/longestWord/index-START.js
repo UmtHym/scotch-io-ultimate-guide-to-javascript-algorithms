@@ -6,7 +6,10 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 
 
 function longestWord(text) {
-    // Code goes here
+
+    var sortedArray = text.split(' ')
+                            .sort((wordA, wordB)=> wordB.length - wordA.length )
+    return sortedArray[0]
 }
 
 

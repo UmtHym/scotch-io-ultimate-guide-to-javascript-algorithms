@@ -7,7 +7,7 @@ function rangeSum(arr) {
   return sum;
 }
 
-// USING THE ARITHMETIC PROGRESSION FORMULA
+// USING THE ARITHMETIC PROGRESSION FORMULA (Gauss's Sum)
 function rangeSum(arr) {
   let arrList = [];
   for (i = arr[0]; i <= arr[1]; i++) {

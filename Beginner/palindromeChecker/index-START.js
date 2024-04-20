@@ -4,10 +4,21 @@ e.g palindromeChecker('racecar') // will return true
 */
 
 
-
-
 function palindromeChecker(text) {
-    // Code goes here
+   
+    let charArray = text.toLowerCase().split('')
+
+    let result = charArray.every((letter, index)=>{
+        
+        //if the index is below half way
+        if(index < charArray.length/2){
+            return true;
+        }
+        //if the first letter is same with last and so on 
+        return letter === charArray[charArray.length - 1 - index]
+    })
+    
+   return result
 }
 
 

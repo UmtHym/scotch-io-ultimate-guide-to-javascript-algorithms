@@ -5,8 +5,11 @@
 */
 
 function chunkArray(array, size) {
-    // Code goes here
-}
+    if(array.length <= size){
+        return [array]
+    }
+    return [array.slice(0,size), ...chunkArray(array.slice(size), size)]
+ }
 
 
 module.exports = chunkArray

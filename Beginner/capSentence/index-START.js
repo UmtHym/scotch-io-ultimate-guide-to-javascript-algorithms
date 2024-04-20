@@ -6,11 +6,13 @@ return the equivalent of the sentence when capitalised. E.g
 
 
 
-
 function capSentence(text) {
-   // Code goes here
+  let wordsArray = text.toLowerCase().split(' ')
+  
+  let capsArray = wordsArray.map( word=>{
+    return  word.replace(word[0], word[0].toUpperCase())
+  })
+
+  return capsArray.join(' ')
 }
-
-
-
 module.exports = capSentence

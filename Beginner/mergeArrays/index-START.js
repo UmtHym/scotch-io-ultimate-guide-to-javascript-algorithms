@@ -7,14 +7,15 @@
 function mergeArrays(...arrays) {
 
     let jointArray = []
-    
-    arrays.forEach(array => {
-        jointArray = [...jointArray, ...array]
-    });
+   
+    arrays.forEach((array)=>{
+        
+        jointArray = [...jointArray, ...array ]
 
-    return [...new Set([...jointArray])]
+    })
+    const uniqueArray = jointArray.filter((item, index)=> jointArray.indexOf(item) === index)
 
-    
+    return uniqueArray
 }
 
 

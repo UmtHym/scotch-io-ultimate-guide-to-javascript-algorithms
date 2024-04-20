@@ -10,7 +10,9 @@ Translate the provided string to pig latin by following the rules below:
 */
 
 function pigLatin(str) {
-  // Code goes here
+  return str
+  .replace(/^([aeiouy])(.*)/, '$1$2way')
+  .replace(/^([^aeiouy]+)(.*)/, '$2$1ay');
 }
 
 module.exports = pigLatin;
